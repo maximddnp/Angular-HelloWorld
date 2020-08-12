@@ -6,6 +6,11 @@ pipeline {
         }
     }
     stages {
+        stage('Build') {
+            steps {
+                sh 'npm install'
+            }
+        }
         stage('Stage release') {
             steps {
                 sh """
